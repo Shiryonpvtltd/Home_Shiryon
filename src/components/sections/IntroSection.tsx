@@ -41,11 +41,12 @@ const IntroSection = () => {
   </p>
 
   <button
-    className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300"
-    onClick={() => alert("Let's start building together!")}
-  >
-    Join Our Vision
-  </button>
+  className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300"
+  onClick={() => window.location.hash = 'contact'}
+>
+  Join Our Vision
+</button>
+
 </div>
 
       </div>

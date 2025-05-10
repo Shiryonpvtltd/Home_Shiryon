@@ -42,8 +42,8 @@ const App = () => {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ 
-                opacity: 1, 
-                scale: [0.8, 1.2, 0.9, 1] 
+                opacity: [0.5, 0.8, 0.6, 0.7], 
+                scale: [0.9, 1.2, 0.95, 1]  
               }}
               transition={{ 
                 duration: 1.5,
@@ -51,15 +51,15 @@ const App = () => {
                 repeat: Infinity,
                 repeatType: "reverse"
               }}
-              className="w-24 h-24 relative"
+              className="w-60 h-60 relative "
             >
               <div className="absolute inset-0 border-4 border-red-500 rounded-full opacity-30"></div>
-              <div className="absolute inset-0 border-t-4 border-white rounded-full animate-spin"></div>
+              <div className="absolute inset-0 border-t-4 border-white rounded-full animate-ping"></div>
               <div className="absolute inset-0 flex items-center justify-center">
                 <img 
                   src={Logo} 
                   alt="SHIRYON" 
-                  className="w-16 h-16 object-contain"
+                  className="w-50 h-50 object-contain"
                 />
               </div>
             </motion.div>

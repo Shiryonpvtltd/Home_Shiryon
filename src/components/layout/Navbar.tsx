@@ -70,7 +70,7 @@ const Navbar = () => {
       <div className="w-full h-18 flex items-center justify-between px-4 md:px-8 backdrop-blur-xl bg-white/10 border-b border-white/20 shadow-md">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img src={logo} alt="Logo" className="w-12 h-12 object-contain" />
+          <img src={logo} alt="Logo" className="w-25 h-25 object-contain" />
           <span className="text-white text-2xl font-cursive">Shiryon</span>
         </div>
 
