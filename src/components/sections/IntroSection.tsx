@@ -26,11 +26,12 @@ const IntroSection = () => {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-800/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-6 py-12 z-10">
-      <div className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent">
-    We see. We build. We dominate.
-  </h1>
+         <div className="container mx-auto px-6 py-12 z-10">
+        <div className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          <p className="text-gray-500 text-lg md:text-xl mb-2 font-bold">Vidēmus. Ædificāmus. Domināmur</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent">
+            We see. We build. We dominate.
+          </h1>
 
   <p className="text-xl md:text-2xl mb-6 max-w-2xl">
     Revolutionizing Gym Apparel

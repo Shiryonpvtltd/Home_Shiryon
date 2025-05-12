@@ -55,7 +55,7 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Email: <a href="mailto:founders@shiryon.in" className="hover:text-red-500 transition-colors">founders@shiryon.in</a>
+              Email: <a href="mailto: info@shiryon.com" className="hover:text-red-500 transition-colors"> info@shiryon.com</a>
             </motion.p>
           </div>
           
