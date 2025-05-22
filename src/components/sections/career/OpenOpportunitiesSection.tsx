@@ -63,7 +63,7 @@ const jobs: Job[] = [
 
 const OpenOpportunitiesSection = () => {
   const [selectedJob, setSelectedJob] = useState<Job | null>(null);
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  // Removed unused hoveredCard state
 
   return (
     <section className="py-20 bg-black">
@@ -92,8 +92,6 @@ const OpenOpportunitiesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
-              onHoverStart={() => setHoveredCard(job.id)}
-              onHoverEnd={() => setHoveredCard(null)}
               className="bg-gray-900 rounded-lg shadow-lg overflow-hidden cursor-pointer border border-gray-800 hover:border-red-500/50 transition-colors duration-300"
             >
               <div className="p-6">

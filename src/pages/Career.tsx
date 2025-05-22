@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import HeroSection from '../components/sections/career/HeroSection';
 import OpenOpportunitiesSection from '../components/sections/career/OpenOpportunitiesSection';
 import WhyShiryonSection from '../components/sections/career/WhyShiryonSection';

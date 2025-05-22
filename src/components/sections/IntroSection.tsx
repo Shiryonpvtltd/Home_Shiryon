@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { ArrowDown } from 'lucide-react';
 
 const IntroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
