@@ -16,48 +16,91 @@ const IntroSection = () => {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden">
-      {/* Radial red-black gradient background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,0,0,0.2),_black)] z-0"></div>
+    <section className="min-h-screen bg-black text-white flex items-center justify-center relative overflow-hidden pt-8">
+      {/* Dramatic background with multiple layers */}
+      <div className="absolute inset-0 bg-black">
+        {/* Red gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 via-black to-black"></div>
+        
+        {/* Diagonal lines pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `repeating-linear-gradient(
+              45deg,
+              #ff0000 0px,
+              #ff0000 1px,
+              transparent 10px,
+              transparent 10px
+            )`,
+            backgroundSize: '20px 20px'
+          }}></div>
+        </div>
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/3 left-1/3 w-72 h-72 bg-red-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-800/10 rounded-full blur-3xl"></div>
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-red-600/10 rounded-full blur-[100px]"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-red-800/10 rounded-full blur-[100px]"></div>
       </div>
 
-         <div className="container mx-auto px-6 py-12 z-10">
-        <div className={`transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-          <p className="text-gray-500 text-lg md:text-xl mb-2 font-bold">Vidēmus. Ædificāmus. Domināmur</p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent">
-            We see. We build. We dominate.
+      <div className="container mx-auto px-6 py-12 z-10">
+        <div className={`transition-all duration-1000 transform text-center ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          {/* Latin text with decorative line */}
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-[1px] w-16 bg-red-600"></div>
+            <p className="text-gray-500 text-lg md:text-xl font-bold tracking-widest">Vidēmus. Ædificāmus. Domināmur</p>
+            <div className="h-[1px] w-16 bg-red-600"></div>
+          </div>
+
+          {/* Main heading with dramatic gradient */}
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-red-500 via-red-600 to-red-700 bg-clip-text text-transparent">
+            <div className="flex flex-col items-center">
+              <div className="text-center">
+                <span className="inline-block">We see.</span>
+              </div>
+              <div className="text-center">
+                <span className="inline-block">We build.</span>
+              </div>
+              <div className="text-center">
+                <span className="inline-block">We dominate.</span>
+              </div>
+            </div>
           </h1>
 
-  <p className="text-xl md:text-2xl mb-6 max-w-2xl">
-    Revolutionizing Gym Apparel
-  </p>
+          {/* Subheading with accent */}
+          <div className="relative mb-8">
+            <p className="text-xl md:text-2xl font-light text-gray-300 font-serif">
+              Revolutionizing Gym Apparel
+            </p>
+          </div>
 
-  <p className="text-lg md:text-xl mb-10 max-w-3xl text-gray-300">
-    <strong>SHIRYON</strong>: is not another activewear label. We are creating a new category. <br /> <em>Dedicated Gymwear</em> — apparel engineered for squats, pulls, and presses.
-  </p>
+          {/* Description with enhanced typography */}
+          <div className="max-w-2xl mx-auto mb-12">
+            <p className="text-base md:text-lg text-gray-400 leading-relaxed font-light">
+              <span className="text-red-500 font-semibold font-sans">SHIRYON</span>: is not another activewear label. 
+              <br />
+              <span className="text-gray-300 italic font-serif">We are creating a new category.</span>
+              <br />
+              <span className="text-gray-400 font-light">Dedicated Gymwear — apparel engineered for squats, pulls, and presses.</span>
+            </p>
+          </div>
 
-  <button
-  className="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all duration-300"
-  onClick={() => window.location.hash = 'contact'}
->
-  Join Our Vision
-</button>
-
-</div>
-
+          {/* Enhanced CTA button */}
+          <button
+            className="group relative px-8 py-4 bg-transparent border-2 border-red-600 text-white rounded-full 
+                     font-semibold overflow-hidden transition-all duration-300 hover:bg-red-600"
+            onClick={() => window.location.href = '/career'}
+          >
+            <span className="relative z-10">Join Our Vision</span>
+            <div className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+          </button>
+        </div>
       </div>
 
       {/* Scroll indicator */}
       <div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer animate-bounce"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
         onClick={scrollToNextSection}
       >
-        <ArrowDown className="text-white" size={32} />
+    
       </div>
     </section>
   );

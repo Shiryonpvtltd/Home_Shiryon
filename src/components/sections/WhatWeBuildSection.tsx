@@ -134,18 +134,55 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
 const WhatWEBuildSection = () => {
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
-
-
-  
   const headerInView = useInView(headerRef, { once: false, amount: 0.3 });
 
   return (
-    <section ref={sectionRef} className="min-h-screen bg-black text-white pt-16 pb-24 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section ref={sectionRef} className="min-h-screen bg-black text-white pt-16 pb-24 overflow-hidden relative">
+      {/* Animated background elements */}
+      <motion.div
+        className="absolute inset-0 opacity-10 z-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.1 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-800 mix-blend-multiply" />
+      </motion.div>
+
+      {/* Animated particles */}
+      <div className="absolute inset-0 z-0">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-red-500 rounded-full"
+            initial={{
+              x: Math.random() * window.innerWidth,
+              y: Math.random() * window.innerHeight,
+              scale: 0,
+            }}
+            animate={{
+              y: [null, Math.random() * window.innerHeight],
+              scale: [0, 1, 0],
+            }}
+            transition={{
+              duration: Math.random() * 3 + 2,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <div ref={headerRef} className="text-center mb-20">
+        <motion.div 
+          ref={headerRef} 
+          className="text-center mb-20 relative z-20"
+          initial={{ opacity: 0, y: -50 }}
+          animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
+          transition={{ duration: 0.8 }}
+        >
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-5xl font-bold mb-4 text-white"
             initial={{ opacity: 0, y: -50 }}
             animate={headerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -50 }}
             transition={{ duration: 0.8 }}
@@ -166,7 +203,7 @@ const WhatWEBuildSection = () => {
           >
             We specialize in creating exceptional structures that blend innovative design with practical functionality.
           </motion.p>
-        </div>
+        </motion.div>
 
         {/* Projects Section */}
         <motion.div 
