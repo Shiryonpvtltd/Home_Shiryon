@@ -9,6 +9,7 @@ import Footer from '../components/layout/Footer';
 import ThreePillars from '../components/sections/ThreePillars';
 import WhatWeAreBuilding from '../components/sections/WhatWeAreBuilding';
 import OurStrategy from '../components/sections/OurStrategy';
+import OpportunitiesSection from '../components/sections/OpportunitiesSection';
 
 const Home = () => {
   return (
@@ -43,6 +44,10 @@ const Home = () => {
 
       <div id="vision" >
         <Vision />
+      </div>
+
+      <div id="opportunities" >
+        <OpportunitiesSection />
       </div>
 
       {/* <div id="pillars" >
