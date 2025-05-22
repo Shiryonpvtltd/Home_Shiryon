@@ -90,7 +90,7 @@ const OpportunitiesSection = () => {
             <span className="bg-red-500/10 text-red-400 px-3 py-1 rounded-full text-sm">Product Design</span>
           </div>
           <button
-            onClick={() => navigate('/career')}
+            onClick={() => navigate('/careers')}
             className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg hover:shadow-red-500/20"
           >
             Apply for this Position
@@ -106,7 +106,7 @@ const OpportunitiesSection = () => {
         className="z-10"
       >
         <button
-          onClick={() => navigate('/career')}
+          onClick={() => navigate('/careers')}
           className="inline-flex items-center gap-2 bg-transparent border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
         >
           View All Open Positions
