@@ -86,7 +86,7 @@ const IntroSection = () => {
           <button
             className="group relative px-8 py-4 bg-transparent border-2 border-red-600 text-white rounded-full 
                      font-semibold overflow-hidden transition-all duration-300 hover:bg-red-600"
-            onClick={() => window.location.href = '/career'}
+            onClick={() => window.location.href = '/careers'}
           >
             <span className="relative z-10">Join Our Vision</span>
             <div className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
